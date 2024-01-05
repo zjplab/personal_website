@@ -9,13 +9,13 @@ Here are the steps you'd follow for that:
 
    - To install the package, navigate to your Gatsby project folder and run:
 
-        npm install react-html-parser
+        yarn add react-html-parser
 
 2. **Load HTML files**
 
    - Firstly, you need to access your HTML files from the local filesystem. You can use the `gatsby-source-filesystem` plugin. Install it by running:
 
-        npm install --save gatsby-source-filesystem
+        yarn add --save gatsby-source-filesystem
 
    - Then, add the plugin to your `gatsby-config.js` file:
 
@@ -95,3 +95,20 @@ Here are the steps you'd follow for that:
         ```
 
 This will give you a base to start with, but it could require additional work depending on the specifics of your HTML files and how you'd like your blog to be structured and styled.
+
+5. **Generate static page content**
+
+Develop Your Site: Make changes to your site's code using the file structure outlined above. Run your development server with:
+
+`gatsby develop`
+This command starts a local development server and opens up a browser window. Most changes are refreshed in real time.
+
+Build Static Pages: Once you're ready to deploy your site, you can generate static content with:
+
+`gatsby build`
+This command performs an optimized production build, generating static HTML and per-route JavaScript code bundles.
+
+Serve the Static Build: To test the production build locally, use:
+
+`gatsby serve`
+This starts a local HTML server for testing your built site.
