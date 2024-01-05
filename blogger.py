@@ -31,8 +31,10 @@ class BlogDownloader:
         raw_date = soup.find('h2', class_='date-header').text
         date = datetime.strptime(raw_date, '%A, %B %d, %Y').strftime('%Y-%m-%d') # convert to 'yyyy-mm-dd' format
         filename = f'{date}-{slug}.html' # appending date before title
-        with open(f'{self.folder}/{filename}', 'w', encoding='utf8') as f:
-            f.write(str(soup))
+        filepath = f'{self.folder}/{filename}'
+        if not os.path.exists(filepath):
+            with open(filepath, 'w', encoding='utf8') as f:
+                f.write(str(soup))
 
     def download_blog_posts(self):
         if not os.path.exists(self.folder):
