@@ -6,6 +6,7 @@
   "author": "JPZ <jpz@jpz.com>",
   "license": "MIT",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
     "gatsby": "^5.13.1",
     "gatsby-cli": "^5.13.1",
     "gatsby-plugin-image": "^3.13.0",

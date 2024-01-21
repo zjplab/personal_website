@@ -38,7 +38,7 @@ class BlogDownloader:
 
     def download_blog_posts(self):
         if not os.path.exists(self.folder):
-            os.makedirs(self.folder)
+            os.makedirs(self.folder, exist_ok=True)
 
         response = requests.get(self.blog_url)
         soup = BeautifulSoup(response.content, 'html.parser')

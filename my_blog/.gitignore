@@ -71,3 +71,4 @@ yarn-error.log
 # sources files and blog posts
 src/
 blog/
+.html
